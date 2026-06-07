@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title><%= restaurant %> — Order Bot</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,800;1,9..144,500&family=Outfit:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <main class="app">
+    <section class="phone">
+      <header class="bar">
+        <div class="brand">
+          <div class="logo">🍲</div>
+          <div class="brand-text">
+            <h1><%= restaurant %></h1>
+            <span class="status"><i class="dot"></i> Order assistant • online</span>
+          </div>
+        </div>
+        <div class="tag">est. Lagos</div>
+      </header>
+
+      <div id="messages" class="messages" aria-live="polite"></div>
+
+      <div id="quick" class="quick"></div>
+
+      <form id="composer" class="composer" autocomplete="off">
+        <input
+          id="input"
+          class="field"
+          type="text"
+          placeholder="Type a number or a message…"
+          maxlength="200"
+          aria-label="Message"
+        />
+        <button id="send" class="send" type="submit" aria-label="Send">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 2 11 13" /><path d="M22 2 15 22l-4-9-9-4 20-7z" />
+          </svg>
+        </button>
+      </form>
+    </section>
+    <p class="footnote">Reply <b>1</b> to order · <b>99</b> checkout · <b>98</b> history · <b>97</b> current · <b>0</b> cancel</p>
+  </main>
+
+  <script src="/js/chat.js"></script>
+</body>
+</html>
